@@ -117,8 +117,8 @@ footer {
 }
 
 .profile-photo {
-  width: 50px;      /* smaller image */
-  height: 50px;
+  width: 100px;      /* smaller image */
+  height: 100px;
   border-radius: 30%;
   object-fit: cover;
   margin-bottom: 1rem;
