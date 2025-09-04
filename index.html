@@ -8,35 +8,85 @@
 </head>
 <body>
 
-    <header class="header-container">
-  <img src="photo-Melissa.jpeg" alt="Photo de Melissa" class="profile-photo">
-  <div class="header-text">
-    <h1>👩‍💻 Melissa Boutlendj</h1>
-    <p>Étudiante en Master 1 Management de l’IA en Santé | Centrale Lille</p>
+  <!-- Language switch -->
+  <div class="lang-switch">
+    <button onclick="setLanguage('fr')">🇫🇷 FR</button>
+    <button onclick="setLanguage('en')">🇬🇧 EN</button>
   </div>
+
+  <header class="header-container">
+    <img src="photo-Melissa.jpeg" alt="Photo de Melissa" class="profile-photo">
+
+    <!-- Texte FR -->
+    <div class="header-text lang fr">
+      <h1>👩‍💻 Melissa Boutlendj</h1>
+      <p>Étudiante en Master 1 Management de l’IA en Santé | Centrale Lille</p>
+    </div>
+
+    <!-- Texte EN -->
+    <div class="header-text lang en">
+      <h1>👩‍💻 Melissa Boutlendj</h1>
+      <p>Master’s student in AI Management for Healthcare | Centrale Lille</p>
+    </div>
 
     <nav>
       <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#experience">Expériences</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="lang fr">À propos</a><a href="#about" class="lang en">About</a></li>
+        <li><a href="#projects" class="lang fr">Projets</a><a href="#projects" class="lang en">Projects</a></li>
+        <li><a href="#experience" class="lang fr">Expériences</a><a href="#experience" class="lang en">Experience</a></li>
+        <li><a href="#articles" class="lang fr">Articles</a><a href="#articles" class="lang en">Articles</a></li>
+        <li><a href="#contact" class="lang fr">Contact</a><a href="#contact" class="lang en">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="about">
-      <h2>À propos</h2>
-      <p> 
-Je suis Melissa Boutlendj, étudiante en Master 1 Management de l’Intelligence Artificielle en santé, une formation qui relie ma passion pour l’intelligence artificielle et le domaine médical. Mon objectif est de faire évoluer les systèmes de santé afin de mieux répondre aux besoins des patients et de faciliter les tâches des professionnels de santé, tout en garantissant une utilisation optimale de la puissance de l’IA au service de la santé publique et privée, dans le respect des cadres légaux et de la confidentialité des patients.
+      <h2 class="lang fr">À propos</h2>
+      <h2 class="lang en">About</h2>
 
-Après mon baccalauréat avec mention en mathématiques, j’ai complété une licence en informatique générale à l'université d'Avignon en France afin de pouvoir me spécialiser pleinement durant mes deux années de master.
+      <p class="lang fr"> 
+        Je suis Melissa Boutlendj, étudiante en Master 1 Management de l’Intelligence Artificielle en santé, une formation qui relie ma passion pour l’intelligence artificielle et le domaine médical. Mon objectif est de faire évoluer les systèmes de santé afin de mieux répondre aux besoins des patients et de faciliter les tâches des professionnels de santé, tout en garantissant une utilisation optimale de la puissance de l’IA au service de la santé publique et privée, dans le respect des cadres légaux et de la confidentialité des patients.
+        <br><br>
+        Après mon baccalauréat avec mention en mathématiques, j’ai complété une licence en informatique générale à l'université d'Avignon en France afin de pouvoir me spécialiser pleinement durant mes deux années de master.
+        <br><br>
+        Je suis actuellement à la recherche d’un stage de 5 à 6 mois à partir de mars 2026, et j’ai hâte de contribuer à des projets ayant un réel impact sur la société.
+      </p>
 
-Je suis actuellement à la recherche d’un stage de 5 à 6 mois à partir de mars 2026, et j’ai hâte de contribuer à des projets ayant un réel impact sur la société.
- </p>
+      <p class="lang en">
+        I am Melissa Boutlendj, a Master’s student in Artificial Intelligence Management for Healthcare, a program that bridges my passion for artificial intelligence and the medical field. My goal is to improve healthcare systems to better meet patients' needs and support healthcare professionals, while ensuring optimal use of AI’s power in both public and private healthcare, in compliance with legal frameworks and patient confidentiality.
+        <br><br>
+        After graduating with honors in Mathematics, I pursued a Bachelor’s degree in Computer Science at the University of Avignon in France, before specializing fully in AI during my two-year Master’s program.
+        <br><br>
+        I am currently seeking a 5-6 month internship starting in March 2026, and I am eager to contribute to projects with a real impact on society.
+      </p>
     </section>
+  </main>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
+    }
+    // Default = English
+    setLanguage('en');
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="projects">
   <h2>🚀 Projets</h2>

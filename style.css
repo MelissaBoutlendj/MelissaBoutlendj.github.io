@@ -197,3 +197,29 @@ footer {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+
+/* === Langues === */
+.lang { display: none; }
+.lang.active { display: block; }
+
+.lang-switch {
+  text-align: right;
+  margin: 1rem;
+}
+
+.lang-switch button {
+  background: #1abc9c;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  background: #16a085;
+}
+
+
