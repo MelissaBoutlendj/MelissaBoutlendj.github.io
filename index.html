@@ -30,33 +30,69 @@
     <section id="about">
       <h2>À propos</h2>
       <p> 
-Je suis Melissa Boutlendj, étudiante en Master 1 Management de l’Intelligence Artificielle, une formation qui relie ma passion pour l’intelligence artificielle et le domaine médical. Mon objectif est de faire évoluer les systèmes de santé afin de mieux répondre aux besoins des patients et de faciliter les tâches des professionnels de santé, tout en garantissant une utilisation optimale de la puissance de l’IA au service de la santé publique et privée, dans le respect des cadres légaux et de la confidentialité des patients.
+Je suis Melissa Boutlendj, étudiante en Master 1 Management de l’Intelligence Artificielle en santé, une formation qui relie ma passion pour l’intelligence artificielle et le domaine médical. Mon objectif est de faire évoluer les systèmes de santé afin de mieux répondre aux besoins des patients et de faciliter les tâches des professionnels de santé, tout en garantissant une utilisation optimale de la puissance de l’IA au service de la santé publique et privée, dans le respect des cadres légaux et de la confidentialité des patients.
 
-Après mon baccalauréat avec mention en mathématiques, j’ai complété une licence en informatique générale afin de pouvoir me spécialiser pleinement durant mes deux années de master.
+Après mon baccalauréat avec mention en mathématiques, j’ai complété une licence en informatique générale à l'université d'Avignon en France afin de pouvoir me spécialiser pleinement durant mes deux années de master.
 
-Je suis actuellement à la recherche d’un stage de 5 à 6 mois à partir de mars 2026, et j’ai hâte de contribuer à des projets ayant un réel impact.
+Je suis actuellement à la recherche d’un stage de 5 à 6 mois à partir de mars 2026, et j’ai hâte de contribuer à des projets ayant un réel impact sur la société.
  </p>
     </section>
 
     <section id="projects">
-      <h2>🚀 Projets</h2>
-      <div class="card">
-        <h3>🧠 Classification d’images médicales</h3>
-        <p>Modèles CNN & MLP pour classer des images de scanner en 4 catégories. <br>Outils : Python, TensorFlow, scikit-learn.</p>
-      </div>
-      <div class="card">
-        <h3>💬 Analyse de sentiments – Amazon Reviews</h3>
-        <p>Clustering non supervisé pour détecter la polarité. <br>Outils : Python, Pandas, sentence-transformers.</p>
-      </div>
-      <div class="card">
-        <h3>🎮 Simulation – Jeu de la Vie</h3>
-        <p>Implémentation de l’automate cellulaire en Python (Pygame).</p>
-      </div>
-      <div class="card">
-        <h3>🤖 Hackathon – Génération de quiz</h3>
-        <p>24h pour coder un modèle d’IA générant des quiz à partir d’un PDF.</p>
-      </div>
-    </section>
+  <h2>🚀 Projets</h2>
+
+  <!-- Projets scolaires -->
+  <h3>📚 Projets scolaires</h3>
+  <div class="projects-grid">
+    <div class="card" onclick="openModal('modal1')">
+      <img src="images/cnn-medical.jpg" alt="Classification d’images médicales">
+      <h4>🧠 Classification d’images médicales</h4>
+      <p>CNN & MLP sur images de scanner.</p>
+    </div>
+
+    <div class="card" onclick="openModal('modal2')">
+      <img src="images/amazon-nlp.jpg" alt="Analyse de sentiments">
+      <h4>💬 Analyse de sentiments</h4>
+      <p>Clustering non supervisé Amazon Reviews.</p>
+    </div>
+  </div>
+
+  <!-- Projets personnels -->
+  <h3>🌟 Projets personnels</h3>
+  <div class="projects-grid">
+    <div class="card" onclick="openModal('modal3')">
+      <img src="images/gameoflife.jpg" alt="Jeu de la Vie">
+      <h4>🎮 Simulation – Jeu de la Vie</h4>
+      <p>Automate cellulaire en Python.</p>
+    </div>
+
+    <div class="card" onclick="openModal('modal4')">
+      <img src="images/quiz-hackathon.jpg" alt="Hackathon Quiz IA">
+      <h4>🤖 Hackathon – Génération de quiz</h4>
+      <p>24h pour coder un générateur de quiz IA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modals cachés -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>🧠 Classification d’images médicales</h3>
+    <p>Projet scolaire avec CNN & MLP pour classer des scanners médicaux en 4 catégories. Outils : Python, TensorFlow, scikit-learn.</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>💬 Analyse de sentiments</h3>
+    <p>Projet de text mining avec clustering non supervisé. Librairies : Pandas, scikit-learn, sentence-transformers.</p>
+  </div>
+</div>
+
+<!-- Ajoute modal3 et modal4 de la même manière -->
+
 
     <section id="experience">
       <h2>💼 Expériences</h2>
@@ -88,3 +124,15 @@ Je suis actuellement à la recherche d’un stage de 5 à 6 mois à partir de ma
   </footer>
 </body>
 </html>
+
+
+
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
