@@ -262,3 +262,30 @@ section projets
   background: #16a085;
 }
 
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 280px;         /* fixed width */
+  height: 280px;        /* same height = square */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
