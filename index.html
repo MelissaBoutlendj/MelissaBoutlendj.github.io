@@ -99,54 +99,80 @@
 
 
 <section id="projects">
-  <h2 class="lang fr">🚀 Projets</h2>
-  <h2 class="lang en">🚀 Projects</h2>
+  <h2>🚀 Projects</h2>
 
+  <!-- Academic Projects -->
+  <h3>📚 Academic Projects</h3>
   <div class="projects-grid">
-    <!-- Card projet -->
-    <div class="card" onclick="openModal('modal-medibot')">
+
+    <!-- Project 1 -->
+    <div class="card">
+      <h4>🧠 Medical Image Classification</h4>
+      <img src="images/cnn-medical.jpg" alt="Medical Classification">
+      <p>CNN & MLP for CT-scan classification.</p>
+      <button onclick="openModal('modal1')">See more</button>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card">
+      <h4>💬 Sentiment Analysis</h4>
+      <img src="images/amazon-nlp.jpg" alt="Sentiment Analysis">
+      <p>Unsupervised clustering of Amazon reviews.</p>
+      <button onclick="openModal('modal2')">See more</button>
+    </div>
+  </div>
+
+  <!-- Personal Projects -->
+  <h3>🌟 Personal Projects</h3>
+  <div class="projects-grid">
+
+    <!-- Personal Project -->
+    <div class="card">
       <h4>🩺 End-to-End Medical Chatbot</h4>
-      <img src="images/chatbot.png" alt="End-to-End Medical Chatbot">
-      <p class="lang fr">Chatbot médical basé sur l’IA générative et RAG.</p>
-      <p class="lang en">Medical chatbot powered by generative AI and RAG.</p>
+      <img src="images/chatbot.png" alt="Medical Chatbot">
+      <p>Generative AI + RAG chatbot for healthcare.</p>
+      <button onclick="openModal('modal-medibot')">See more</button>
     </div>
   </div>
 </section>
 
-<!-- Modal -->
+<!-- ================= MODALS ================= -->
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>🧠 Medical Image Classification</h3>
+    <p>Implemented CNN and MLP models to classify CT scans into four categories. Tools: Python, TensorFlow, scikit-learn.</p>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>💬 Sentiment Analysis</h3>
+    <p>Developed unsupervised clustering methods to detect sentiment polarity in Amazon Reviews. Tools: Python, Pandas, Sentence-transformers.</p>
+  </div>
+</div>
+
+<!-- Modal Medical Chatbot -->
 <div id="modal-medibot" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal-medibot')">&times;</span>
-
-    <!-- Version FR -->
-    <div class="lang fr">
-      <h3>🩺 End-to-End Medical Chatbot utilisant l’IA générative</h3>
-      <p>
-        J’ai conçu et développé un chatbot médical intelligent capable de répondre à des questions médicales en combinant 
-        l’IA générative avec la génération augmentée par récupération (RAG). 
-        Le système analyse des documents médicaux complexes et fournit des réponses précises et contextualisées via une interface web conviviale.
-      </p>
-      <ul>
-        <li>Intégration de modèles NLP de pointe avec LangChain + Pinecone.</li>
-        <li>Conception d’une solution IA full-stack avec Flask.</li>
-        <li>Application responsable de l’IA en santé.</li>
-      </ul>
-    </div>
-
-    <!-- Version EN -->
-    <div class="lang en">
-      <h3>🩺 End-to-End Medical Chatbot using Generative AI</h3>
-      <p>
-        I designed and implemented an intelligent chatbot capable of answering medical questions by combining 
-        generative AI with retrieval-augmented generation (RAG). 
-        The system ingests complex medical documents and delivers accurate, context-aware answers through a web interface.
-      </p>
-      <ul>
-        <li>Integrated state-of-the-art NLP with LangChain + Pinecone.</li>
-        <li>Engineered a full-stack AI solution with Flask.</li>
-        <li>Applied AI responsibly in healthcare.</li>
-      </ul>
-    </div>
+    <h3>🩺 End-to-End Medical Chatbot using Generative AI</h3>
+    <p>
+      I designed and implemented an intelligent chatbot capable of answering medical questions by combining 
+      generative AI with retrieval-augmented generation (RAG). 
+      The system ingests complex medical documents (research papers, clinical guidelines) and delivers accurate, 
+      context-aware answers through a web interface.
+    </p>
+    <ul>
+      <li>Integrated state-of-the-art NLP models with LangChain + Pinecone.</li>
+      <li>Engineered a full-stack AI solution (data ingestion, embeddings, Flask frontend).</li>
+      <li>Applied AI responsibly in healthcare, balancing innovation with usability.</li>
+    </ul>
+    <p><strong>⚡ In short:</strong> A real-world AI assistant bridging research and healthcare practice.</p>
   </div>
 </div>
 
@@ -155,6 +181,30 @@
 
 
 
+    <div class="card" onclick="openModal('modal4')">
+      <img src="images/quiz-hackathon.jpg" alt="Hackathon Quiz IA">
+      <h4>🤖 Hackathon – Génération de quiz</h4>
+      <p>24h pour coder un générateur de quiz IA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modals cachés -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>🧠 Classification d’images médicales</h3>
+    <p>Projet scolaire avec CNN & MLP pour classer des scanners médicaux en 4 catégories. Outils : Python, TensorFlow, scikit-learn.</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>💬 Analyse de sentiments</h3>
+    <p>Projet de text mining avec clustering non supervisé. Librairies : Pandas, scikit-learn, sentence-transformers.</p>
+  </div>
+</div>
 
 
 
