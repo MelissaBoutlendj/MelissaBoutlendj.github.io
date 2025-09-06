@@ -236,11 +236,14 @@ section projets
 }
 
 .card img {
-  width: 100%;
-  max-height: 160px;
-  object-fit: cover;
+  width: 80%;              /* plus petit que la carte */
+  max-height: 140px;       /* limite en hauteur */
+  object-fit: contain;     /* affiche l'image entière sans la couper */
   border-radius: 8px;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;     /* centrage horizontal */
+  display: block;          /* pour appliquer le centrage */
+  background: #f9f9f9;     /* petit fond gris clair derrière */
+  padding: 5px;            /* espace autour de l'image */
 }
 
 .card button {
