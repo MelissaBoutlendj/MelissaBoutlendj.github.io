@@ -107,7 +107,7 @@
     <!-- Project 1 -->
     <div class="card">
       <h4>🧠 Medical Image Classification</h4>
-      <img src="images/medicalimage.jpg" alt="Medical Classification">
+      <img src="images/medicalimage.png" alt="Medical Classification">
       <p>CNN & MLP for CT-scan classification.</p>
       <button onclick="openModal('modal1')">See more</button>
     </div>
@@ -115,7 +115,7 @@
     <!-- Project 2 -->
     <div class="card">
       <h4>💬 Sentiment Analysis</h4>
-      <img src="images/smile.jpg" alt="Sentiment Analysis">
+      <img src="images/smile.webp" alt="Sentiment Analysis">
       <p>Unsupervised clustering of Amazon reviews.</p>
       <button onclick="openModal('modal2')">See more</button>
     </div>
@@ -147,6 +147,15 @@
       <p>Classifying emails as spam or ham using ML models.</p>
       <button onclick="openModal('modal3')">See more</button>
     </div>
+
+     <!-- Personal Project 4 (NEW) -->
+  <div class="card">
+    <h4>🏠 CROUS Checker</h4>
+    <img src="images/crous.webp" alt="CROUS Checker">
+    <p>Real-time housing availability monitoring system.</p>
+    <button onclick="openModal('modal-crous')">See more</button>
+  </div>
+
   </div>
 </section>
 
@@ -235,6 +244,33 @@
   </div>
 </div>
 
+
+<!-- Modal CROUS Checker -->
+<div id="modal-crous" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-crous')">&times;</span>
+    <h3>🏠 CROUS Checker – Intelligent Student Housing Monitoring System</h3>
+    <p>
+      Faced with the challenge of finding student housing in Lille for my Master's degree, 
+      I designed and deployed an automated solution to monitor CROUS housing availability in real time.
+      The system instantly detects new listings and sends email notifications, giving me a major competitive edge 
+      in the highly competitive student housing market.
+    </p>
+
+    <ul>
+      <li><strong>Python 3.10</strong> – API requests and automation script.</li>
+      <li><strong>GitHub Actions</strong> – Scheduled execution every 10 minutes (CI/CD, serverless).</li>
+      <li><strong>SMTP (smtplib + Gmail)</strong> – Real-time email alerts.</li>
+      <li><strong>Secure Environments</strong> – Encrypted credentials for safe email handling.</li>
+      <li><strong>API REST JSON</strong> – Interaction with CROUS backend.</li>
+    </ul>
+
+    <p>
+      ⚡ <strong>Key benefit:</strong> Immediate alerts for new housing availability, 
+      ensuring faster applications compared to other students.
+    </p>
+  </div>
+</div>
 
 
 
