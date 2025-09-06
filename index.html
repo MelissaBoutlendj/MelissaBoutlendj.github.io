@@ -177,13 +177,14 @@
 </div>
 
 
+<!-- Music Generation App -->
+<div class="card">
+  <h4>🎵 Music Generation App</h4>
+  <img src="images/music-generation.jpg" alt="Music Generation App">
+  <p>Text-to-music app powered by Hugging Face generative AI.</p>
+  <button onclick="openModal('modal-music')">See more</button>
+</div>
 
-
-    <div class="card" onclick="openModal('modal4')">
-      <img src="images/quiz-hackathon.jpg" alt="Hackathon Quiz IA">
-      <h4>🤖 Hackathon – Génération de quiz</h4>
-      <p>24h pour coder un générateur de quiz IA.</p>
-    </div>
   </div>
 </section>
 
@@ -192,7 +193,7 @@
 <!-- Project 3 -->
 <div class="card">
   <h4>📧 Mail Spam Detection</h4>
-  <img src="images/spam-detection.jpg" alt="Spam Detection">
+  <img src="images/spam.webp" alt="Spam Detection">
   <p>Classifying emails as spam or ham using ML models.</p>
   <button onclick="openModal('modal3')">See more</button>
 </div>
@@ -239,6 +240,38 @@
 </div>
 
 
+<!-- Modal Music -->
+<div id="modal-music" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-music')">&times;</span>
+    
+    <h3>🎵 Music Generation App</h3>
+    <p>
+      The <strong>Music Generation App</strong> allows users to create beautiful, AI-generated music based on text prompts. 
+      Powered by Hugging Face generative AI models, it produces unique compositions in real time.
+    </p>
+
+    <ul>
+      <li><strong>Text-to-Music Generation:</strong> input a text prompt and generate unique pieces of music.</li>
+      <li><strong>Customizable Prompts:</strong> describe mood, instruments, or setting for tailored results.</li>
+      <li><strong>High-Quality Audio:</strong> generates audio up to 10.24 seconds at 16 kHz.</li>
+      <li><strong>Interactive UI:</strong> built with Gradio for a smooth user experience.</li>
+    </ul>
+
+    <p>
+      ⚡ <strong>Technical Stack:</strong> Python, Hugging Face Diffusers, PyTorch, and Gradio for deployment.
+    </p>
+
+    <p>
+      Example prompts:
+      <ul>
+        <li>"A serene and elegant piano composition, evoking a sense of royal grandeur."</li>
+        <li>"A peaceful forest melody with light strings and a gentle piano."</li>
+        <li>"A dark and brooding orchestral piece with deep strings and haunting melodies."</li>
+      </ul>
+    </p>
+  </div>
+</div>
 
 
 
