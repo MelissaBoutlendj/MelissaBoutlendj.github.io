@@ -400,3 +400,13 @@ section projets
 .contact-card a:hover {
   color: #0077b5;
 }
+
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card:nth-child(1) i { color: #ea4335; } /* Gmail rouge */
+.contact-card:nth-child(2) i { color: #0077b5; } /* LinkedIn bleu */
+.contact-card:nth-child(3) i { color: #333; }   /* GitHub noir */
+.contact-card:nth-child(4) i { color: #ff0000; } /* YouTube rouge */
