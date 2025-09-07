@@ -471,17 +471,45 @@ section projets
 }
 
 
+/* Section Bénévolat */
+#volunteering {
+  padding: 4rem 2rem;
+  background: #f0f4f8;
+}
+
+.section-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #1abc9c;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.volunteering-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;  /* espace entre les cartes */
+}
+
 .volunteering-card {
-  background: white;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 280px;
-  text-align: center; /* centrer logo + texte */
-  transition: transform 0.2s;
+  text-align: center;  /* centrer texte + logo */
+  transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.volunteering-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .volunteer-logo {
@@ -493,5 +521,24 @@ section projets
   border: 1px solid #ddd;
   padding: 5px;
   background-color: #fff;
+}
+
+.volunteering-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.volunteering-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .volunteering-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 
