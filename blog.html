@@ -49,23 +49,28 @@
 <script>
   // Définir les articles par catégorie
   const articles = {
-    "prolog": [
-      {title: "Introduction to Prolog", file: "pdfs/prolog-intro.pdf"},
-      {title: "Prolog avancé", file: "pdfs/prolog-avance.pdf"}
-    ],
-    "ai-initiation": [
-      {title: "Introduction à l’IA", file: "pdfs/initiation-ia.pdf"},
-      {title: "Apprentissage supervisé", file: "pdfs/supervised-learning.pdf"}
-    ],
-    "algorithms": [
-      {title: "Simplex Algorithm", file: "pdfs/simplex.pdf"},
-      {title: "Dijkstra Algorithm", file: "pdfs/dijkstra.pdf"}
-    ],
-    "ai-medicine": [
-      {title: "AI in Radiology", file: "pdfs/ai-radiology.pdf"},
-      {title: "AI in Pathology", file: "pdfs/ai-pathology.pdf"}
-    ]
-  };
+  "prolog": [
+    {title: "Cours 1 : Introduction à Prolog", file: "articles/prolog/cours1-introduction-prolog.pdf"},
+    {title: "Cours 2 : Arithmétique en Prolog", file: "articles/prolog/cours2-arithmetique-prolog.pdf"},
+    {title: "Cours 3 : Listes en Prolog", file: "articles/prolog/cours3-listes-prolog.pdf"},
+    {title: "Cours 4 : Bases de données en Prolog", file: "articles/prolog/cours4-bases-donnees-prolog.pdf"},
+    {title: "Cours 5 : Cut en Prolog", file: "articles/prolog/cours5-cut-prolog.pdf"},
+    {title: "Cours 6 : Unification en Prolog", file: "articles/prolog/cours6-unification-prolog.pdf"}
+  ],
+  "ai-initiation": [
+    {title: "Introduction à l’IA", file: "pdfs/initiation-ia.pdf"},
+    {title: "Apprentissage supervisé", file: "pdfs/supervised-learning.pdf"}
+  ],
+  "algorithms": [
+    {title: "Simplex Algorithm", file: "pdfs/simplex.pdf"},
+    {title: "Dijkstra Algorithm", file: "pdfs/dijkstra.pdf"}
+  ],
+  "ai-medicine": [
+    {title: "AI in Radiology", file: "pdfs/ai-radiology.pdf"},
+    {title: "AI in Pathology", file: "pdfs/ai-pathology.pdf"}
+  ]
+};
+
 
   const blogGrid = document.getElementById("blogGrid");
 
