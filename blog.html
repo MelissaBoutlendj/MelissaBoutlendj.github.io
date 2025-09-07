@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Melissa Boutlendj</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header-container">
+  <h1>📝 Blog de Melissa Boutlendj</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">À propos</a></li>
+      <li><a href="index.html#projects">Projets</a></li>
+      <li><a href="index.html#experience">Expériences</a></li>
+      <li><a href="blog.html" class="active">Articles</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="categories">
+    <h2>Catégories d’articles</h2>
+    <div class="blog-filters">
+      <button onclick="showCategory('all')">Toutes</button>
+      <button onclick="showCategory('prolog')">Prolog</button>
+      <button onclick="showCategory('ai-initiation')">Initiation IA</button>
+      <button onclick="showCategory('algorithms')">Algorithmes</button>
+      <button onclick="showCategory('ai-medicine')">IA en Médecine</button>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2>Articles</h2>
+    <div class="blog-grid" id="blogGrid">
+      <!-- Les articles seront affichés ici dynamiquement -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Melissa Boutlendj – Portfolio</p>
+</footer>
+
+<script>
+  // Définir les articles par catégorie
+  const articles = {
+    "prolog": [
+      {title: "Introduction to Prolog", file: "pdfs/prolog-intro.pdf"},
+      {title: "Prolog avancé", file: "pdfs/prolog-avance.pdf"}
+    ],
+    "ai-initiation": [
+      {title: "Introduction à l’IA", file: "pdfs/initiation-ia.pdf"},
+      {title: "Apprentissage supervisé", file: "pdfs/supervised-learning.pdf"}
+    ],
+    "algorithms": [
+      {title: "Simplex Algorithm", file: "pdfs/simplex.pdf"},
+      {title: "Dijkstra Algorithm", file: "pdfs/dijkstra.pdf"}
+    ],
+    "ai-medicine": [
+      {title: "AI in Radiology", file: "pdfs/ai-radiology.pdf"},
+      {title: "AI in Pathology", file: "pdfs/ai-pathology.pdf"}
+    ]
+  };
+
+  const blogGrid = document.getElementById("blogGrid");
+
+  function showCategory(category) {
+    blogGrid.innerHTML = ""; // vider la grille
+    let toShow = [];
+
+    if(category === 'all') {
+      for(let cat in articles) {
+        toShow = toShow.concat(articles[cat]);
+      }
+    } else {
+      toShow = articles[category] || [];
+    }
+
+    if(toShow.length === 0) {
+      blogGrid.innerHTML = "<p>Aucun article disponible pour cette catégorie.</p>";
+      return;
+    }
+
+    toShow.forEach(article => {
+      const card = document.createElement("div");
+      card.classList.add("blog-card");
+      card.innerHTML = `
+        <h3>${article.title}</h3>
+        <a href="${article.file}" download class="btn">📥 Télécharger PDF</a>
+      `;
+      blogGrid.appendChild(card);
+    });
+  }
+
+  // Afficher tous les articles par défaut
+  showCategory('all');
+</script>
+
+</body>
+</html>
