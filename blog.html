@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,12 @@
 <body>
 
 <header class="header-container">
-  <h1>📝 Blog de Melissa Boutlendj</h1>
+  <h1>Melisss's Blog</h1>
   <nav>
     <ul>
-      <li><a href="index.html">À propos</a></li>
-      <li><a href="index.html#projects">Projets</a></li>
-      <li><a href="index.html#experience">Expériences</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
       <li><a href="blog.html" class="active">Articles</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -24,20 +24,20 @@
 
 <main>
   <section id="categories">
-    <h2>Catégories d’articles</h2>
+    <h2>Article Categories</h2>
     <div class="blog-filters">
-      <button onclick="showCategory('all')">Toutes</button>
+      <button onclick="showCategory('all')">All</button>
       <button onclick="showCategory('prolog')">Prolog</button>
-      <button onclick="showCategory('ai-initiation')">Initiation IA</button>
-      <button onclick="showCategory('algorithms')">Algorithmes</button>
-      <button onclick="showCategory('ai-medicine')">IA en Médecine</button>
+      <button onclick="showCategory('ai-initiation')">AI Initiation</button>
+      <button onclick="showCategory('algorithms')">Algorithms</button>
+      <button onclick="showCategory('ai-medicine')">AI in Medicine</button>
     </div>
   </section>
 
   <section id="articles">
     <h2>Articles</h2>
     <div class="blog-grid" id="blogGrid">
-      <!-- Les articles seront affichés ici dynamiquement -->
+      <!-- Articles will be displayed here dynamically -->
     </div>
   </section>
 </main>
@@ -47,35 +47,34 @@
 </footer>
 
 <script>
-  // Définir les articles par catégorie
+  // Articles data
   const articles = {
-  "prolog": [
-    {title: "Cours 1 : Introduction à Prolog", file: "articles/prolog/cours1-introduction-prolog.pdf"},
-    {title: "Cours 2 : Arithmétique en Prolog", file: "articles/prolog/cours2-arithmetique-prolog.pdf"},
-    {title: "Cours 3 : Listes en Prolog", file: "articles/prolog/cours3-listes-prolog.pdf"},
-    {title: "Cours 4 : Bases de données en Prolog", file: "articles/prolog/cours4-bases-donnees-prolog.pdf"},
-    {title: "Cours 5 : Cut en Prolog", file: "articles/prolog/cours5-cut-prolog.pdf"},
-    {title: "Cours 6 : Unification en Prolog", file: "articles/prolog/cours6-unification-prolog.pdf"}
-  ],
-  "ai-initiation": [
-    {title: "Introduction à l’IA", file: "pdfs/initiation-ia.pdf"},
-    {title: "Apprentissage supervisé", file: "pdfs/supervised-learning.pdf"}
-  ],
-  "algorithms": [
-    {title: "Simplex Algorithm", file: "pdfs/simplex.pdf"},
-    {title: "Dijkstra Algorithm", file: "pdfs/dijkstra.pdf"}
-  ],
-  "ai-medicine": [
-    {title: "AI in Radiology", file: "pdfs/ai-radiology.pdf"},
-    {title: "AI in Pathology", file: "pdfs/ai-pathology.pdf"}
-  ]
-};
-
+    "prolog": [
+      {title: "Course 1: Introduction to Prolog", file: "articles/prolog/cours1-introduction-prolog.pdf"},
+      {title: "Course 2: Arithmetic in Prolog", file: "articles/prolog/cours2-arithmetique-prolog.pdf"},
+      {title: "Course 3: Lists in Prolog", file: "articles/prolog/cours3-listes-prolog.pdf"},
+      {title: "Course 4: Databases in Prolog", file: "articles/prolog/cours4-bases-donnees-prolog.pdf"},
+      {title: "Course 5: Cut in Prolog", file: "articles/prolog/cours5-cut-prolog.pdf"},
+      {title: "Course 6: Unification in Prolog", file: "articles/prolog/cours6-unification-prolog.pdf"}
+    ],
+    "ai-initiation": [
+      {title: "Introduction to AI", file: "pdfs/initiation-ia.pdf"},
+      {title: "Supervised Learning", file: "pdfs/supervised-learning.pdf"}
+    ],
+    "algorithms": [
+      {title: "Simplex Algorithm", file: "pdfs/simplex.pdf"},
+      {title: "Dijkstra Algorithm", file: "pdfs/dijkstra.pdf"}
+    ],
+    "ai-medicine": [
+      {title: "AI in Radiology", file: "pdfs/ai-radiology.pdf"},
+      {title: "AI in Pathology", file: "pdfs/ai-pathology.pdf"}
+    ]
+  };
 
   const blogGrid = document.getElementById("blogGrid");
 
   function showCategory(category) {
-    blogGrid.innerHTML = ""; // vider la grille
+    blogGrid.innerHTML = ""; // clear grid
     let toShow = [];
 
     if(category === 'all') {
@@ -87,7 +86,7 @@
     }
 
     if(toShow.length === 0) {
-      blogGrid.innerHTML = "<p>Aucun article disponible pour cette catégorie.</p>";
+      blogGrid.innerHTML = "<p>No articles available in this category.</p>";
       return;
     }
 
@@ -96,13 +95,13 @@
       card.classList.add("blog-card");
       card.innerHTML = `
         <h3>${article.title}</h3>
-        <a href="${article.file}" download class="btn">📥 Télécharger PDF</a>
+        <a href="${article.file}" download class="btn">📥 Download PDF</a>
       `;
       blogGrid.appendChild(card);
     });
   }
 
-  // Afficher tous les articles par défaut
+  // Show all articles by default
   showCategory('all');
 </script>
 
