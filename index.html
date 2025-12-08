@@ -163,6 +163,18 @@
   <!-- Personal Projects -->
   <h3>🌟 Personal Projects</h3>
   <div class="projects-grid">
+  
+    
+    <!-- Personal Project 0 -->
+    <div class="card">
+    <h4>🧠 Brain Tumor Detection</h4>
+    <img src="images/brain-tumor.jpg" alt="Brain Tumor Detection">
+    <p>Deep learning (VGG16) + Flask web app for MRI tumor classification.</p>
+    <button onclick="openModal('modal-brain')">See more</button>
+  </div>
+
+
+
     <!-- Personal Project 1 -->
     <div class="card">
       <h4>🩺 End-to-End Medical Chatbot</h4>
@@ -200,6 +212,30 @@
 
 
 <!-- ================= MODALS ================= -->
+
+
+<!-- Modal 0 -->
+<!-- Modal Brain Tumor Detection -->
+<div id="modal-brain" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-brain')">&times;</span>
+    <h3>🧠 Brain Tumor Detection with VGG16 (2025)</h3>
+
+    <p>End-to-end MRI brain tumor detection system using deep learning and Flask:</p>
+
+    <ul>
+      <li>Custom data generator + image augmentation</li>
+      <li>Transfer learning with VGG16 (fine-tuning last layers)</li>
+      <li>Training + evaluation (ROC, confusion matrix, classification report)</li>
+      <li>Flask web app for real-time tumor prediction</li>
+      <li>Bootstrap UI for clean user interface</li>
+    </ul>
+
+    <p><b>Technologies :</b> Python, TensorFlow, Keras, NumPy, Flask, Bootstrap, PIL, Matplotlib.</p>
+  </div>
+</div>
+
+
 
 <!-- Modal 1 -->
 <div id="modal1" class="modal">
