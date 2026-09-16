@@ -531,6 +531,14 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+.exp-logo {
+    width: 120px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    display: block;
+}
+
 .experience-card .date {
   font-style: italic;
 
