@@ -148,7 +148,23 @@
   <!-- Academic Projects -->
   <h3>📚 Academic Projects</h3>
   <div class="projects-grid">
-    <!-- Project 1 -->
+    <!-- Project 2: Emergency Department -->
+    <div class="card">
+      <h4>🏥 Emergency Department Patient Flow</h4>
+      <img src="images/emergency.webp" alt="Emergency Department Patient Flow">
+      <p>Patient scheduling and dynamic resource optimisation.</p>
+      <button onclick="openModal('modal-emergency')">See more</button>
+    </div>
+
+    <!-- Project 3: Air Pollution -->
+    <div class="card">
+      <h4>🌍 Multi-Agent Air Pollution Simulation</h4>
+      <img src="images/atmo.webp" alt="Air Pollution Multi-Agent Simulation">
+      <p>Multi-agent simulation of air pollution and ATMO index.</p>
+      <button onclick="openModal('modal-atmo')">See more</button>
+    </div>
+
+    <!-- Project 4 -->
     <div class="card">
       <h4>🧠 Medical Image Classification</h4>
       <img src="images/medicalimage.png" alt="Medical Classification">
@@ -156,7 +172,7 @@
       <button onclick="openModal('modal1')">See more</button>
     </div>
 
-    <!-- Project 2 -->
+    <!-- Project 5 -->
     <div class="card">
       <h4>💬 Sentiment Analysis</h4>
       <img src="images/smile.webp" alt="Sentiment Analysis">
@@ -165,7 +181,7 @@
     </div>
    
 
-     <!-- Project 3 -->
+     <!-- Project 6 -->
     <div class="card">
       <h4>🖥️ Linux System Monitoring Web App</h4>
       <img src="images/parcinfo.jpg" alt="Linux Monitoring">
@@ -173,7 +189,7 @@
       <button onclick="openModal('modal3')">See more</button>
     </div>
 
-    <!-- Project 4 -->
+    <!-- Project 7 -->
     <div class="card">
       <h4>🚗 Gestion des Véhicules et Clients</h4>
       <img src="images/car.webp" alt="Java Project">
@@ -181,7 +197,7 @@
       <button onclick="openModal('modal4')">See more</button>
     </div>
 
-    <!-- Project 5 -->
+    <!-- Project 8 -->
     <div class="card">
       <h4>🚌 BlaBlaCar PHP Clone</h4>
       <img src="images/covoiturage.jpg" alt="BlaBlaCar Clone">
@@ -195,9 +211,17 @@
   <!-- Personal Projects -->
   <h3>🌟 Personal Projects</h3>
   <div class="projects-grid">
-  
     
-    <!-- Personal Project 0 -->
+
+    <!-- Project 0: Alzheimer's Prediction -->
+    <div class="card">
+      <h4>🧠 Alzheimer's Prediction</h4>
+      <img src="images/alzheimer.webp" alt="Alzheimer's Prediction">
+      <p>FLAIR MRI pipeline and zero-shot lesion segmentation.</p>
+      <button onclick="openModal('modal-alzheimer')">See more</button>
+    </div>
+    
+    <!-- Personal Project 1 -->
     <div class="card">
     <h4>🧠 Brain Tumor Detection</h4>
     <img src="images/brain-tumor.jpg" alt="Brain Tumor Detection">
@@ -207,7 +231,7 @@
 
 
 
-    <!-- Personal Project 1 -->
+    <!-- Personal Project 2 -->
     <div class="card">
       <h4>🩺 End-to-End Medical Chatbot</h4>
       <img src="images/chatbot.webp" alt="Medical Chatbot">
@@ -215,7 +239,7 @@
       <button onclick="openModal('modal-medibot')">See more</button>
     </div>
 
-    <!-- Personal Project 2 -->
+    <!-- Personal Project 3 -->
     <div class="card">
       <h4>🎵 Music Generation App</h4>
       <img src="images/music.jpeg" alt="Music Generation App">
@@ -223,7 +247,7 @@
       <button onclick="openModal('modal-music')">See more</button>
     </div>
 
-    <!-- Personal Project 6 -->
+    <!-- Personal Project 4 -->
     <div class="card">
       <h4>📧 Mail Spam Detection</h4>
       <img src="images/spam.webp" alt="Spam Detection">
@@ -231,7 +255,7 @@
       <button onclick="openModal('modal6')">See more</button>
     </div>
 
-     <!-- Personal Project 4 (NEW) -->
+     <!-- Personal Project 5 (NEW) -->
   <div class="card">
     <h4>🏠 CROUS Checker</h4>
     <img src="images/crous.jpg" alt="CROUS Checker">
@@ -247,6 +271,94 @@
 
 
 <!-- Modal 0 -->
+<!-- Modal Alzheimer's Prediction -->
+<div id="modal-alzheimer" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-alzheimer')">&times;</span>
+
+    <h3>🧠 Alzheimer's Prediction - CHU Guadeloupe</h3>
+
+    <p>
+      <strong>Datathon, DU IASH 2026 - Université des Antilles</strong>
+    </p>
+
+    <p>
+      Developed a brain MRI processing pipeline using FLAIR MRI data from
+      977 patients from the ADNI cohort.
+    </p>
+
+    <ul>
+      <li>Built a preprocessing pipeline for FLAIR brain MRI data.</li>
+      <li>Processed medical imaging data in DICOM format.</li>
+      <li>Deployed and fine-tuned Medical SAM 3 for zero-shot segmentation.</li>
+      <li>Focused on segmentation of white matter hyperintensities.</li>
+      <li>Used AWS EC2 for computational resources.</li>
+    </ul>
+
+    <p>
+      <b>Technologies:</b> Python, PyTorch, Medical SAM 3, AWS EC2, DICOM.
+    </p>
+  </div>
+</div>
+
+
+<!-- Modal Emergency Department -->
+<div id="modal-emergency" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-emergency')">&times;</span>
+
+    <h3>🏥 Emergency Department Patient Flow Optimisation</h3>
+
+    <p>
+      <strong>CHU de Lille</strong>
+    </p>
+
+    <p>
+      Modelled patient scheduling and resource allocation using real
+      hospital data to study patient flows in the emergency department.
+    </p>
+
+    <ul>
+      <li>Modelled patient scheduling from real hospital data.</li>
+      <li>Developed optimisation algorithms for patient flow management.</li>
+      <li>Built a multi-agent system for dynamic resource allocation.</li>
+      <li>Developed a medical triage ontology.</li>
+    </ul>
+
+    <p>
+      <b>Key Skills:</b> Python, optimisation, multi-agent systems,
+      Mesa, medical ontologies, OWL, RDF, SPARQL, Protégé.
+    </p>
+  </div>
+</div>
+
+
+<!-- Modal ATMO -->
+<div id="modal-atmo" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-atmo')">&times;</span>
+
+    <h3>🌍 Multi-Agent Simulation of Air Pollution</h3>
+
+    <p>
+      Developed a multi-agent simulation to study air pollution dynamics
+      through heterogeneous agents, local interactions and collaborative
+      strategies.
+    </p>
+
+    <ul>
+      <li>Designed heterogeneous agents with local interactions.</li>
+      <li>Implemented collaborative strategies between agents.</li>
+      <li>Simplified the ATMO air-quality index across multiple scenarios.</li>
+      <li>Simulated and visualised different environmental scenarios.</li>
+    </ul>
+
+    <p>
+      <b>Technologies:</b> Python, Mesa 3, Matplotlib.
+    </p>
+  </div>
+</div>
+
 <!-- Modal Brain Tumor Detection -->
 <div id="modal-brain" class="modal">
   <div class="modal-content">
@@ -266,8 +378,6 @@
     <p><b>Technologies :</b> Python, TensorFlow, Keras, NumPy, Flask, Bootstrap, PIL, Matplotlib.</p>
   </div>
 </div>
-
-
 
 <!-- Modal 1 -->
 <div id="modal1" class="modal">
@@ -369,8 +479,6 @@
     </p>
   </div>
 </div>
-
-
 
 
 
